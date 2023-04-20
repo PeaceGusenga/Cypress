@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "Peace Gusenga",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "^12.10.0"
+  "devDependencies": {
+    "cypress": "^10.3.0"
   }
 }
