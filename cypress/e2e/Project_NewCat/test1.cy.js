@@ -15,11 +15,11 @@ it ('Google Search', function(){
     cy.get('.U0faLd > .PUDfGe > .z1asCe > svg',{timeout:6000}).click()
 
     // click to display latest News
-    cy.get('[tabindex="-1"] > .tb_u > .tb_h > .tb_sh > .PPjCfd > [data-tab_type="NEWS"]',{timeout:5000}).click()
+    cy.get('[tabindex="-1"] > .tb_u > .tb_h > .tb_sh > .PPjCfd > [data-tab_type="NEWS"]').click()
 
     // click to display Table
-    cy.get('[tabindex="-1"] > .tb_u > .tb_h > .tb_sh > .PPjCfd > [data-tab_type="STANDINGS"]',{timeout:5000}).click()
+    cy.get('[tabindex="-1"] > .tb_u > .tb_h > .tb_sh > .PPjCfd > [data-tab_type="STANDINGS"]').click()
 
     // click to display Players
-    cy.get('[tabindex="-1"] > .tb_u > .tb_h > .tb_sh > .PPjCfd > [data-tab_type="PLAYERS"]',{timeout:5000}).click()
+    cy.get('[tabindex="-1"] > .tb_u > .tb_h > .tb_sh > .PPjCfd > [data-tab_type="PLAYERS"]').click()
 })
