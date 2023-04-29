@@ -30,7 +30,7 @@ it ('Assertions Test', () => {
   // Chain extra Assertions using "and"
   cy.get('#query-btn')
   .should('be.visible')
-  .and('include.text','Button')
+  .and('include.text','Button').and('be.enabled')
 
 
 
