@@ -41,7 +41,6 @@ it ('Assertions Test', () => {
 
     //Expected Failuire
     //Assert whether 4 is equal to 5 and display message in single quotes
-    assert.equal(4,5 ,'NOT EQUAL')
+    //assert.equal(4,5 ,'NOT EQUAL')
      
-
 })
