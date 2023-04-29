@@ -4,6 +4,7 @@ import { DashboardPage } from "./pages/dashboard_page"
 var loginPage = new LoginPage() 
 var dashboardPage = new DashboardPage()
 
+describe('All Login Tests for OrangeHRM Website', () => {
 it('Login Test 1', () => {
     //Navigate to Demo login webpage
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -48,4 +49,5 @@ it('Login Test 3', () => {
     //Assert invalid Login Error Appears
     loginPage.testInvaidPasswordError()
 
+})
 })
