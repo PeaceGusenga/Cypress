@@ -32,6 +32,16 @@ it ('Assertions Test', () => {
   .should('be.visible')
   .and('include.text','Button').and('be.enabled')
 
+    //Explicit Assertions
+    expect(true).to.be.true
 
+    //Test equal assertion
+    //Assert whether 4 is equal to 5 and display message in single quotes
+    assert.equal(5,5 ,'This is EQUAL')
+
+    //Expected Failuire
+    //Assert whether 4 is equal to 5 and display message in single quotes
+    assert.equal(4,5 ,'NOT EQUAL')
+     
 
 })
