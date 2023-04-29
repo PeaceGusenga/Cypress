@@ -4,6 +4,7 @@ import { ForgotPasswordPage } from "./pages/forgotPassword_page";
 var loginPage = new LoginPage()
 var forgotPW = new ForgotPasswordPage()
 
+describe('All Forgot Password Tests for OrangeHRM Website', () => {
 it('Forgot Password Test 1', () => {
     //Navigate to Demo login webpage
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -36,4 +37,5 @@ it('Forgot Password Test 2', () => {
 
     //Assert Password Reset Sent
     forgotPW.assertResetSuccessful()
+})
 })
