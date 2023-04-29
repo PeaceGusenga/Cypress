@@ -9,10 +9,13 @@ it ('Assertions Test', () => {
     cy.get('.query-btn').should('contain', 'Button')
     //Assertion for Button Test 3
     cy.get('#querying .well>button:first').should('contain', 'Button')
-
-
-    //To find elements by data attribute, query using the attribute selector.
+    //Assert whether element has sepecific id
+    cy.get('.query-btn').should('have.id','query-btn')
+    //Assert whether element is part of specific class
     cy.get('[data-test-id="test-example"]').should('have.class', 'example')
+
+    //Assert whether element is visisble
+    cy.get('#query-btn').should('be.visible')
 
 
 })
