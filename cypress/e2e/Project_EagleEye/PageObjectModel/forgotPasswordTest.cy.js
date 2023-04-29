@@ -5,10 +5,12 @@ var loginPage = new LoginPage()
 var forgotPW = new ForgotPasswordPage()
 
 describe('All Forgot Password Tests for OrangeHRM Website', () => {
-it('Forgot Password Test 1', () => {
+
+    beforeEach(() => {
     //Navigate to Demo login webpage
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-
+    } )
+it('Forgot Password Test 1', () => {
     //click Forgot Password
     loginPage.clickForgotPassword()
 
@@ -23,9 +25,6 @@ it('Forgot Password Test 1', () => {
 })
 
 it('Forgot Password Test 2', () => {
-    //Navigate to Demo login webpage
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-
     //click Forgot Password
     loginPage.clickForgotPassword()
 

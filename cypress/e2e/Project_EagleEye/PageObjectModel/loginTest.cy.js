@@ -5,9 +5,12 @@ var loginPage = new LoginPage()
 var dashboardPage = new DashboardPage()
 
 describe('All Login Tests for OrangeHRM Website', () => {
-it('Login Test 1', () => {
-    //Navigate to Demo login webpage
+    //Run before every test
+    beforeEach(() => {
+         //Navigate to Demo login webpage
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    } )
+it('Login Test 1', () => {
     //Enter Username
     loginPage.enterUsername('Admin')
     //Enter Password
@@ -22,8 +25,6 @@ it('Login Test 1', () => {
 })
 
 it('Login Test 2', () => {
-    //Navigate to Demo login webpage
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     //Enter Username
     loginPage.enterUsername('aadmin')
     //Enter Password
@@ -38,8 +39,6 @@ it('Login Test 2', () => {
 })
 
 it('Login Test 3', () => {
-    //Navigate to Demo login webpage
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     //Enter Username
     loginPage.enterUsername('aadmin')
     //Enter Password
