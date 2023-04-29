@@ -1,14 +1,15 @@
+import { LoginPage } from "./pages/login_page"
+
+const loginPage = new LoginPage() 
+
 it('Page Object Model Example', () => {
     
     //Navigate to Demo login webpage
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-
     //Enter Username
-    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type('Admin')
-
+    loginPage.enterUsername
     //Enter Password
-    cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type('admin123')
-
+    loginPage.enterPassword
     //Click login Button
-    cy.get('.oxd-button').click()
+    loginPage.clickLogin
 })
