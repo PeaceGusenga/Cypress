@@ -28,9 +28,10 @@ it ('Assertions Test', () => {
   .should('equal', 'test-example')
 
   // Chain extra Assertions using "and"
-  cy.get('[data-test-id="test-example"]')
-  .invoke('attr', 'data-test-id')
-  .should('equal', 'test-example').and('have.class','example')
+  cy.get('#query-btn')
+  .should('be.visible')
+  .and('include.text','Button')
+
 
 
 })
