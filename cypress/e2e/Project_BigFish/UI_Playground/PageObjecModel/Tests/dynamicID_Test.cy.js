@@ -16,6 +16,7 @@ describe('getting to the UI Playground Landing Page', () => {
     })
 
     it('check button ID value', () => {
-        cy.contains('Button with Dynamic ID').should('have.id','c12469b7-c98a-cae6-f0d6-29e4abff2b70')
+        //added static ID to assert ID changes
+        cy.contains('Button with Dynamic ID').should('not.have.id','c12469b7-c98a-cae6-f0d6-29e4abff2b70')
     })
 })
