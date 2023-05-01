@@ -34,6 +34,8 @@ it('Login Test 2', () => {
     //Click login Button
     loginPage.clickLogin()
     //Click Profile Drop-down
+    cy.wait(2000)
+    //Click Logout
     dashboardPage.clickProfileDropdown()
      // wait 3 seconds
      cy.wait(3000)
