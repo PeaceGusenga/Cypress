@@ -1,4 +1,4 @@
-name: Run Cypress Tests
+name: Project Eagle Eye
 
 on:
   push:
@@ -22,4 +22,4 @@ jobs:
         npm install cypress --save-dev
 
     - name: Run Cypress Tests
-      run: npx cypress run --spec "cypress/e2e/Project_BigFish/UI_Playground/PageObjecModel/Tests/homepage_link_Test.cy.js"
+      run: npx cypress run --spec "cypress/e2e/Project_EagleEye/PageObjectModel/loginTest.cy.js, cypress/e2e/Project_EagleEye/PageObjectModel/forgotPasswordTest.cy.js"
