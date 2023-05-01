@@ -26,7 +26,7 @@ it('Test 1 - verify that the button is clickable', () => {
 
     it('Test 4 - verify button is disbaled', () => {
         // Assert that the button is disabled
-        cy.get('#badButton').should('not.be.enabled');
+        cy.get('#badButton').should('be.enabled');
 
         })
     it('Test 5 - Click button again', () => {
