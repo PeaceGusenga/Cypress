@@ -7,7 +7,7 @@ var dashboardPage = new DashboardPage()
 describe('All Login Tests for OrangeHRM Website', () => {
     //Run before every test
     beforeEach(() => {
-         //Navigate to Demo login webpage
+         //Navigate to Orangehrm login webpage
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     } )
 it('Login Test 1', () => {

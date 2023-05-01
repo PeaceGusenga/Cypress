@@ -1,0 +1,53 @@
+/*
+Entering text with physical keyboard can be different from sending DOM events 
+to an element. This page is specifically desined to illustrate this problem. 
+
+There are cases when attempts to set a text via DOM events lead to nowhere 
+and the only way to proceed is to emulate real keyboard input at OS level.
+*/
+
+/// <reference types="Cypress" />
+
+import { IndexPage } from "../Pages/index_page"
+
+var landingpage = new IndexPage ()
+
+describe('Sending keys to a text input field, the button on the page will contain the same value if processed correctly', () => {
+  it('Test 1 - Sending keys from DOM', () => {
+    // Visit the page that contains the button
+    cy.visit('http://www.uitestingplayground.com/')
+    landingpage.clickTextInput_Page()
+    cy.get('#newButtonName').type('Test 1', { force: true })
+    cy.get('#updatingButton').click()
+    cy.get('button[type="button"]').should('have.value', 'Test 1')
+  })
+
+  it('Test 2 - send keys to input using keyboard events', () => {
+    // Select the input field
+    const input = cy.get('#newButtonName')
+
+    // Simulate keyboard events to type "hello"
+    input.then(($input) => {
+      const el = $input[0]
+      const event = new Event('keydown', { bubbles: true })
+      event.keyCode = 72 // h
+      el.dispatchEvent(event)
+
+      const event2 = new Event('keydown', { bubbles: true })
+      event2.keyCode = 69 // e
+      el.dispatchEvent(event2)
+
+      const event3 = new Event('keydown', { bubbles: true })
+      event3.keyCode = 76 // l
+      el.dispatchEvent(event3)
+      el.value += String.fromCharCode(76) // Use value to append to input
+
+      const event4 = new Event('keydown', { bubbles: true })
+      event4.keyCode = 79 // o
+      el.dispatchEvent(event4)
+    })
+
+    // Verify that the input field has the correct value
+    input.should('have.value', 'hello')
+  })
+})
