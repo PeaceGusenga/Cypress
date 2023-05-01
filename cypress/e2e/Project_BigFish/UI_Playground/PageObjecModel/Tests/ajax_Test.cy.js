@@ -20,6 +20,6 @@ describe('Test to wait for an element to show up', () => {
   })
   it('verify new content loaded', () =>{
    // Verify that new content has been loaded on the site
-   cy.get('#new-content').should('be.visible');
+   cy.contains('Data loaded with AJAX get request.').should('be.visible');
   })
 });
