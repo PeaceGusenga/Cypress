@@ -19,6 +19,8 @@ it('Login Test 1', () => {
     loginPage.clickLogin()
     //Click Profile Drop-down
     dashboardPage.clickProfileDropdown()
+    // wait 3 seconds
+    cy.wait(3000)
     //Click Logout
     dashboardPage.clickLogout()
 
@@ -33,6 +35,8 @@ it('Login Test 2', () => {
     loginPage.clickLogin()
     //Click Profile Drop-down
     dashboardPage.clickProfileDropdown()
+     // wait 3 seconds
+     cy.wait(3000)
     //Click Logout
     dashboardPage.clickLogout()
 
