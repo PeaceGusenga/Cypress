@@ -16,7 +16,7 @@ describe('Testing class attributes', () => {
 
     })
 
-    it('find the button using btn-primary class', () => {
+    it('find the button using a unique class identifier', () => {
         // use a CSS attribute selector to select the button with 
         //the specific word in its class name
         cy.get('button[class*=\'btn-primary\']') 
