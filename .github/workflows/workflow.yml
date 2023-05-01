@@ -21,4 +21,4 @@ jobs:
         run: npm install
      
       - name: Run Cypress Tests
-        run: npm run cy:run -- --spec "cypress/integration/**/*Test all the links on the landing page.spec.js"
+        run: npm run cy:run -- --spec "cypress/integration/**/*homepage_link_Test.spec.js"
