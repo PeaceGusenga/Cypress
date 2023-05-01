@@ -25,6 +25,7 @@ describe('Sending keys to a text input field, the button on the page will contai
   it('Test 2 - send keys to input using keyboard events', () => {
     // Select the input field
     const input = cy.get('#newButtonName')
+    const buttonVerify = cy.get('#updatingButton')
 
     // Simulate keyboard events to type "hello"
     input.then(($input) => {
@@ -48,6 +49,6 @@ describe('Sending keys to a text input field, the button on the page will contai
     })
 
     // Verify that the input field has the correct value
-    input.should('have.value', 'hello')
+    buttonVerify.should('have.value', 'hello')
   })
 })
