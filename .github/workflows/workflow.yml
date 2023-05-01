@@ -16,9 +16,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16.16.0'
-
-      - name: Install Cypress
-        run: cypress install
      
       - name: Install Dependencies
         run: npm install
@@ -28,6 +25,9 @@ jobs:
         with:
           path: ~/.cache/Cypress
           key: ${{ runner.os }}-cypress-${{ hashFiles('**/package-lock.json') }}
-     
-      - name: Run Cypress Tests
-        run: npm run cy:run -- --spec "cypress/integration/**/*homepage_link_Test.spec.js"
+
+      - name: Run Cypress tests
+        uses: cypress/included@10.3.0
+        with:
+         working-directory: ./cypress
+         start: npm run cy:run -- --spec "cypress/integration/**/*homepage_link_Test.spec.js"
