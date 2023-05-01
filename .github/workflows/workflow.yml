@@ -22,4 +22,4 @@ jobs:
         npm install cypress --save-dev
 
     - name: Run Cypress Tests
-      run: npx cypress run --spec "Cypress/cypress/e2e/Project_BigFish/UI_Playground/PageObjecModel/Tests/homepage_link_Test.cy.js"
+      run: npx cypress run --spec "cypress/e2e/Project_BigFish/UI_Playground/PageObjecModel/Tests/homepage_link_Test.cy.js"
