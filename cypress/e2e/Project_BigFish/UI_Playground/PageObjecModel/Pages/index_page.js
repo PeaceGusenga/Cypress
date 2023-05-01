@@ -1,6 +1,6 @@
 export class IndexPage {
    //Page Links
-    indexpage_DynamicID_page = ''
+    indexpage_DynamicID_page = ':nth-child(1) > :nth-child(1) > h3 > a'
     indexpage_ClassAttribute_page = ''
     indexpage_HiddenLayers_page = ''
     indexpage_LoadDelay_page = ''
