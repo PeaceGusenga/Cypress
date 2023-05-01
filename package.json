@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cy:run": "cypress run"
   },
   "keywords": [],
   "author": "Peace Gusenga",
