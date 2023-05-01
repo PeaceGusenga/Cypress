@@ -19,6 +19,12 @@ jobs:
      
       - name: Install Dependencies
         run: npm install
+
+      - name: Cache Cypress binary
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/Cypress
+          key: ${{ runner.os }}-cypress-${{ hashFiles('**/package-lock.json') }}
      
       - name: Run Cypress Tests
         run: npm run cy:run -- --spec "cypress/integration/**/*homepage_link_Test.spec.js"
